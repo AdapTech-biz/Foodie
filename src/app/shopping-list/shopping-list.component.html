@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-10">
-        <app-shopping-edit></app-shopping-edit>
+        <app-shopping-edit (newItemAdded)="addNewItem($event)"></app-shopping-edit>
         <hr>
         <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between" *ngFor="let item of items">{{item.name}} <span>({{item.amount}})</span></li>

@@ -2,18 +2,18 @@
     <div class="form-group row">
         <label for="name" class="col-sm-1 col-form-label">Name</label>
         <div class="col-sm-4">
-            <input type="text" id="name" class="form-control">
+            <input [(ngModel)]="name" type="text" id="name" name="name" class="form-control" required />
         </div>
         <label for="amount"  class="col-sm-1 col-form-label">Amount</label>
         <div class="col-sm-2">
-            <input type="number" id="amount" class="form-control">
+            <input [(ngModel)]="amount" type="number" id="amount" name="amount" class="form-control" required />
         </div>
     </div>
     <div class="row justify-content-center">
         
-        <input type="button" role="button" class="btn btn-success" value="Add">
+        <input type="button" role="button" class="btn btn-success" value="Add" (click)="clickHappened()">
         <input type="button" role="button" class="btn btn-danger" value="Delete">
-        <input type="button" role="button" class="btn btn-warning" value="Clear">
+        <input type="button" role="button" class="btn btn-warning" value="Clear" (click)="clearEntry()">
                    
 
     </div>
